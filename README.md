@@ -54,6 +54,11 @@ Ok so'll i'll walk you through on how to use this ~~bad boy~~... toast ! :s
 	toast.showToast()
 	```
 	
+DEMO
+
+https://user-images.githubusercontent.com/42436320/125154558-218ac600-e178-11eb-841f-86b415d03ab1.MP4
+
+	
 How to use the toast as a pod
 
 - Open terminal
