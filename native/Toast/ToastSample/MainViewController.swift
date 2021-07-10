@@ -76,7 +76,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,15 +96,13 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         case 2:
             cell.button.setTitle("Banner Toast", for: .normal)
         case 3:
-            cell.button.setTitle("Loading Indicator Toast", for: .normal)
-        case 4:
-            cell.button.setTitle("Banner toast templates (Please don't queue this toast!)", for: .normal)
+            cell.button.setTitle("Banner toast templates)", for: .normal)
         default:
             cell.button.setTitle("Cell not configured!", for: .normal)
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.bounds.height/5
+        return view.bounds.height/4
     }
 }

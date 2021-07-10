@@ -36,22 +36,22 @@ class ButtonTableViewCell: UITableViewCell {
     @objc func showToast() {
         switch indexPath.row {
         case 0:
-            toastView = ToastProfiles.getToast(titleStrings: ["Hey there!"], type: .normal, view: nil, target: self, selector: #selector(changeColor))
+            toastView = ToastProfiles.getToast(titleStrings: ["I'm a toast! I'll dismiss myself after some time or you can swipe me away"], type: .normal, view: nil, target: self, selector: #selector(changeColor))
         case 1:
-            toastView = ToastProfiles.getToast(titleStrings: ["Click the button to change color."], buttonTitle: "YELLOW", type: .action, view: nil, target: self, selector: #selector(changeColor))
+            toastView = ToastProfiles.getToast(titleStrings: ["Click the button to change the background color."], buttonTitle: "YELLOW", type: .action, view: nil, target: self, selector: #selector(changeColor))
         case 2:
             toastView = ToastProfiles.getToast(titleStrings: ["Well this seems to be a banner. :o", "Here is some mandatory banner messsage. Have a nice day. :D"], type: .banner, view: tableView.superview)
-        case 3:
+        case 4:
             toastView = ToastProfiles.getToast(titleStrings: ["Hmm... something's loading apparently. :#"], type: .progressIndicator, view: tableView.superview)
             toastView.animationConfig.persist = false
             toastView.animationConfig.displayDuration = 3
-        case 4:
+        case 3:
             toastView = ToastProfiles.getToast(titleStrings: ["Well these are all the colors the banner toast comes with."], type: .banner, color: .red, view: tableView.superview, target: self)
         default:
             debugPrint("Default didSelect")
         }
         toastView.showToast()
-        if indexPath.row == 4 {
+        if indexPath.row == 3 {
             let timer = CountdownTimer(duration: 2, selector: #selector(demoAllColors), target: self)
             timer.start()
         }
