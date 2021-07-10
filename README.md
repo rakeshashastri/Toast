@@ -22,20 +22,20 @@ Ok so'll i'll walk you through on how to use this ~~bad boy~~... toast ! :s
 - Creating a default toast
 
     -	Use the class function 'getToast' from the class ToastProfiles.swift to get the instance of the toast.
-			
+	```swift		
 	let toast = ToastProfiles.getToast(titleStrings: ["<Title>"], type: .normal, view: view, target: nil, selector: nil)
-
+	```
 
 - Creating custom toast
 
     -	If you want minute changes to the default toast, just make them in the respective 'designConfig' or 'animationConfig' variables after you create a default toast. eg: You want the toast label to have a different color. All you need to do is change, before you call 'showToast'  method.
-			
+	```swift		
 	let toast = ToastProfiles.getToast(titleStrings: ["Title"], type: .normal, view: view, target: nil, selector: nil)
         toast.designConfig.labelTextColor = .black // Desired color
         toast.showToast()
-
+	```
     -	However if you want a completely custom toast. Create the 'animationConfig' and 'designConfig' separately and use the custom initializer in ToastView.
-			
+	```swift		
 	let designConfig = ToastDesignConfig()
 	// Set the variables to what you need. Check 'ToastDesignConfig.swift to find the possible customisations you can make
 	designConfig.backgroundColor = .white
@@ -52,7 +52,7 @@ Ok so'll i'll walk you through on how to use this ~~bad boy~~... toast ! :s
 
 	let toast = ToastView(view: nil, type: .custom, animationConfig: animationConfig, designConfig: designConfig)
 	toast.showToast()
-
+	```
 	
 How to use the toast as a pod
 
